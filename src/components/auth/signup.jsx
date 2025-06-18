@@ -21,7 +21,7 @@ const Signup = () => {
         e.preventDefault();
         setIsLoading(true);
         try {
-            const response = await axios.post('http://localhost:7700/signup', 
+            const response = await axios.post('https://cr-backend-15o2.onrender.com/signup', 
                 {
                     firstName,
                     lastName,

@@ -14,7 +14,7 @@ export const AuthProvider = ({ children }) => {
 
   const checkAuth = async () => {
     try {
-      const response = await axios.get('http://localhost:7700/check-auth', {
+      const response = await axios.get('https://cr-backend-15o2.onrender.com/check-auth', {
         withCredentials: true
       });
       if (response.data.user) {

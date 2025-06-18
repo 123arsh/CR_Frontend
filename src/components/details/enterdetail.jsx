@@ -32,7 +32,7 @@ const Enterdetail = () => {
   // Fetch car info if carId is present
   useEffect(() => {
     if (carId) {
-      axios.get(`http://localhost:7700/car/${carId}`)
+      axios.get(`https://cr-backend-15o2.onrender.com/car/${carId}`)
         .then(res => setCar(res.data.car))
         .catch(() => setCar(null));
     }
@@ -41,7 +41,7 @@ const Enterdetail = () => {
   // Fetch latest verification status after submitSuccess
   useEffect(() => {
     if (submitSuccess && formData.email) {
-      axios.get('http://localhost:7700/detail/detail')
+      axios.get('https://cr-backend-15o2.onrender.com/detail/detail')
         .then(res => {
           const all = res.data.detail;
           const userDetail = all.find(d => d.email === formData.email);
@@ -121,7 +121,7 @@ const Enterdetail = () => {
     });
     if (carId) data.append('carId', carId);
     try {
-      await axios.post('http://localhost:7700/api/buycar', data, {
+      await axios.post('https://cr-backend-15o2.onrender.com/api/buycar', data, {
         headers: { 'Content-Type': 'multipart/form-data' }
       });
       setSubmitSuccess(true);
@@ -139,7 +139,7 @@ const Enterdetail = () => {
           <p className='mt-2 text-center text-gray-600'>Please provide your information to proceed with the car rental</p>
           {car && (
             <div className='mt-6 flex flex-col md:flex-row items-center gap-6 justify-center bg-blue-50 rounded-xl p-4'>
-              <img src={`http://localhost:7700${car.image}`} alt={car.name} className='w-32 h-20 object-contain rounded-lg shadow' />
+              <img src={`https://cr-backend-15o2.onrender.com${car.image}`} alt={car.name} className='w-32 h-20 object-contain rounded-lg shadow' />
               <div>
                 <h3 className='text-xl font-semibold text-blue-900'>{car.name}</h3>
                 <p className='text-gray-700'>Type: {car.catagory}</p>

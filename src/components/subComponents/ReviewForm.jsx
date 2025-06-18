@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { FaStar } from 'react-icons/fa';
 import axios from 'axios';
 
-const API_URL = 'http://localhost:7700';
+const API_URL = 'https://cr-backend-15o2.onrender.com';
 
 const ReviewForm = () => {
   const [formData, setFormData] = useState({
