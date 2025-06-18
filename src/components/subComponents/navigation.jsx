@@ -16,7 +16,7 @@ const Navigation = () => {
   useEffect(() => {
     const checkAuth = async () => {
       try {
-        const response = await axios.get('https://cr-backend-15o2.onrender.com/check-auth', {
+        const response = await axios.get('https://cr-backend-ydia.onrender.com/check-auth', {
           withCredentials: true
         });
         if (response.data.user) {
@@ -44,7 +44,7 @@ const Navigation = () => {
 
   const handleLogout = async () => {
     try {
-      await axios.post('https://cr-backend-15o2.onrender.com/logout', {}, {
+      await axios.post('https://cr-backend-ydia.onrender.com/logout', {}, {
         withCredentials: true
       });
       navigate('/signup');

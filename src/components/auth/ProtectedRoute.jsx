@@ -9,7 +9,7 @@ const ProtectedRoute = ({ children }) => {
   useEffect(() => {
     const checkAuth = async () => {
       try {
-        const response = await axios.get('https://cr-backend-15o2.onrender.com/check-auth', {
+        const response = await axios.get('https://cr-backend-ydia.onrender.com/check-auth', {
           withCredentials: true
         });
         setIsAuthenticated(response.data.isAuthenticated);

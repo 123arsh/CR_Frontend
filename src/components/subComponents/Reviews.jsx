@@ -13,7 +13,7 @@ const Reviews = () => {
     const fetchReviews = async () => {
       try {
         setLoading(true);
-        const response = await axios.get(`https://cr-backend-15o2.onrender.com/api/ratings?page=${page}&limit=10`);
+        const response = await axios.get(`https://cr-backend-ydia.onrender.com/api/ratings?page=${page}&limit=10`);
         const newReviews = response.data.ratings;
         if (newReviews.length === 0) {
           setHasMore(false);
